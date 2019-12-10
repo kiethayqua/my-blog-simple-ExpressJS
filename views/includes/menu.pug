@@ -1,0 +1,14 @@
+.menu
+  ul.nav.nav-pills
+    li
+      a.btn.btn-outline-primary.mr-2(href='/', class=(menu === 'index')?'active':'') Home
+    li
+        a.btn.btn-outline-primary.mr-2(href="/post", class=(menu === 'post')?'active':'') Post
+    if (admin || menu ==='admin')
+      li
+        a.btn.btn-outline-primary.mr-2(href="/admin", class=(menu === 'admin')?'active':'') Admin
+    else
+      li
+        a.btn.btn-outline-primary.mr-2(href='/auth/login', class=(menu === 'login')?'active':'') Login
+      li
+        a.btn.btn-outline-primary.mr-2(href="/logout") Log out

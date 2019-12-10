@@ -1,0 +1,28 @@
+doctype html
+html 
+    head
+        title= appTitle
+        script(type="text/javascript", src="js/jquery-2.0.3.min.js")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+        meta(name="viewport", content="width=device-width, initialscale=1.0")
+    body
+        #wrap
+            .container
+                h1.page-header= appTitle
+                p.lead Welcome to Blog create by ExpressJS
+                block page
+                block header
+                    div
+                        include includes/menu
+                block alert
+                    .alert.alert-warning.invisible
+                .content
+                    block content
+        block footer
+            footer.mastfoot.mt-auto
+                .container
+                    p
+                        | Copyright &copy; 2019 | Kiet Nguyen Dev
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js") 
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
