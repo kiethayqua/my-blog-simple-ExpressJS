@@ -23,9 +23,10 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // dung middleware
+app.use(express.static('public'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser('abcde'));
+app.use(cookieParser('12345'));
 app.use('/', indexRouter);
 app.use('/articles', articlesRouter);
 app.use('/auth', handdleLoginButton.click, authRouter);
